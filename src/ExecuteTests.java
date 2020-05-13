@@ -1,5 +1,9 @@
+import java.util.LinkedList;
+
 public class ExecuteTests {
     public static void main(String args[]) {
+        System.out.println("-----------------------------------------------------------------------");
+
         Test1 test1 = new Test1();
 
         String test1param = "User is not allowed    ";
@@ -27,5 +31,25 @@ public class ExecuteTests {
         System.out.println("Teste 3 params[\"pale\",\"bale\"] = " + test3.execute("pale", "bale"));
         System.out.println("Teste 3 params[\"pale\",\"bake\"] = " + test3.execute("pale", "bake"));
         System.out.println("Teste 3 params[\"pale\",\"pale0\"] = " + test3.execute("pale", "pale"));
+
+        System.out.println("-----------------------------------------------------------------------");
+
+        Test5 test5 = new Test5();
+
+        LinkedList<String> linkedListParam = new LinkedList<String>();
+        linkedListParam.add("abc");
+        linkedListParam.add("cba");
+        linkedListParam.add("abc");
+        linkedListParam.add("aaa");
+        linkedListParam.add("abc");
+        linkedListParam.add("abc");
+        linkedListParam.add("ddd");
+        linkedListParam.add("aaa");
+        linkedListParam.add("abc");
+
+        System.out.println("linkedListParam = " + linkedListParam);
+        System.out.println("Teste 5 remove duplicate = " + test5.execute(linkedListParam));
+
+        System.out.println("-----------------------------------------------------------------------");
     }
 }
