@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 
 public class ExecuteTests {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println("-----------------------------------------------------------------------");
 
         Test1 test1 = new Test1();
@@ -49,6 +49,28 @@ public class ExecuteTests {
 
         System.out.println("linkedListParam = " + linkedListParam);
         System.out.println("Teste 5 remove duplicate = " + test5.execute(linkedListParam));
+
+        System.out.println("-----------------------------------------------------------------------");
+
+        Test7 test7 = new Test7();
+        LinkedList<String> list1 = new LinkedList<>();
+        LinkedList<String> list2 = new LinkedList<>();
+
+        list1.add("C");
+        list1.add("A");
+        list1.add("E");
+        list1.add("H");
+        list1.add("J");
+        list1.add("B");
+
+        list2.add("D");
+        list2.add("F");
+        list2.add("J");
+        list2.add("B");
+
+        System.out.println("List 1 - " + list1);
+        System.out.println("List 2 - " + list2);
+        System.out.println("List intersection - " + test7.execute(list1, list2));
 
         System.out.println("-----------------------------------------------------------------------");
     }
